@@ -9,5 +9,13 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Welcome to My Pantry</h1>
     <a href="/users/<%= user._id %>/foods/new">Add New Item</a>
+
+    <ul>
+      <% pantry.forEach((item) => { %>
+        <a href="/users/<%= user._id%>/foods/<%= item._id%>">
+          <li><%= item.name %></li>
+        </a>
+      <% }) %>
+    </ul>
 </body>
 </html>

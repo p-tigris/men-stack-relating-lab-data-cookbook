@@ -6,6 +6,7 @@
     <title>Add New Food Item</title>
 </head>
 <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Add New Food Item</h1>
     <form action="/users/<%= user._id %>/foods" method="POST">
         <label for="name">Name:</label>
