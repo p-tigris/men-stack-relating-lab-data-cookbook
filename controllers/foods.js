@@ -36,11 +36,11 @@ router.post('/', async (req, res) => {
 });
 
 
-router.delete('/:foodId', async (req, res) => {
+router.delete('/:itemId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
 
-        currentUser.pantry.id(req.params.foodId).deleteOne();
+        currentUser.pantry.id(req.params.itemId).deleteOne();
 
         currentUser.save();
 
@@ -51,13 +51,30 @@ router.delete('/:foodId', async (req, res) => {
     }
 })
 
-router.get('/:foodId/edit', async (req, res) => {
+router.get('/:itemId/edit', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
         
-        res.locals.item = currentUser.pantry.id(req.params.foodId); 
+        res.locals.item = currentUser.pantry.id(req.params.itemId); 
 
         res.render('foods/edit.ejs');
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+})
+
+router.put('/:itemId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+
+        const item = currentUser.pantry.id(req.params.itemId);
+
+        item.set(req.body);
+
+        await currentUser.save();
+
+        res.redirect(`/users/${currentUser._id}/foods`);
     } catch (error) {
         console.log(error);
         res.redirect('/');

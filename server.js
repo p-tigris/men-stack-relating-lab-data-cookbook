@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const express = require('express');
 const app = express();
+
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
@@ -23,7 +24,7 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
