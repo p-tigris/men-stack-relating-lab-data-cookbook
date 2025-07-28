@@ -16,4 +16,18 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:userId/show', async (req, res) => {
+    try {
+        const selectedUser = await User.findById(req.params.userId);
+
+        res.locals.username = selectedUser;
+        res.locals.pantry = selectedUser.pantry;
+
+        res.render('users/show.ejs')
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+})
+
 module.exports = router;
