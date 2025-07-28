@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Coiny&family=Roboto+Slab:wght@100..900&family=Staatliches&display=swap');
+
+body {
+  font-family: 'Coiny', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fad882;
+}
+
+.index-body {
+  background-image: url('https://imgur.com/9EnSGPz.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.signin-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+    color: #007ba7;
+}
+
+h2 {
+    color: #3f7d58;
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+}
+
+.form-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20em;
+  background-color: #d2c1b6;
+  padding: 40px;
+  border-radius: 20px;
+  color: #0a400c;
+}
+
+button {
+    margin-top: 10px;
+    border: solid;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Staatliches', Times, serif;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+.add-button {
+    background-color: green;
+    border-color: green;
+}
+
+.add-button:hover {
+    background-color: #195905;
+    border-color: #195905;
+}
+
+.auth-button {
+    background-color: blue;
+    border-color: blue;
+}
+
+.auth-button:hover {
+    background-color: #191970;
+    border-color: #191970;
+}
+
+.delete-button {
+    background-color: red;
+    border-color: red;
+}
+
+.delete-button:hover {
+    background-color: #950606;
+    border-color: #950606;
+}
+
+.edit-button {
+    background-color: purple;
+    border-color: purple;
+}
+
+.edit-button:hover {
+    background-color: #2a0134;
+    border-color: #2a0134;
+}
+
+label, li, #no-items-msg {
+    font-size: 24px;;
+}
+
+li {
+    font-family: 'Carter One', Times, serif;
+}
+
+a {
+    font-family: 'Staatliches', Times, serif;
+    text-decoration: none;
+}

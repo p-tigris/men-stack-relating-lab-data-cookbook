@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title><%= username.username %>'s Pantry</title>
 </head>
 <body>
@@ -10,7 +11,7 @@
     <h1><%= username.username %>'s Pantry</h1>
 
     <% if (pantry.length === 0) { %>
-        <p>This user does not have any items in their pantry yet.</p>
+        <p id="no-items-msg">This user does not have any items in their pantry yet.</p>
     <% } else { %>
         <ul>
         <% pantry.forEach((item) => { %>
