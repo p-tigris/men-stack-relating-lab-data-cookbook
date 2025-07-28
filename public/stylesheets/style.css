@@ -116,3 +116,29 @@ a {
     font-family: 'Staatliches', Times, serif;
     text-decoration: none;
 }
+
+.pantry-container {
+    background-color: #a8dcab;
+    width: 20em;
+}
+
+.user-container {
+    background-color: #a2cffe;
+}
+
+.other-pantry-container {
+    background-color: #d4af37;
+}
+
+.user-container, .other-pantry-container {
+    width: 15em;
+}
+
+.pantry-container, .user-container, .other-pantry-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+}

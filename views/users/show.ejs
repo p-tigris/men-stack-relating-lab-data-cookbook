@@ -13,11 +13,13 @@
     <% if (pantry.length === 0) { %>
         <p id="no-items-msg">This user does not have any items in their pantry yet.</p>
     <% } else { %>
-        <ul>
-        <% pantry.forEach((item) => { %>
-            <li><%= item.name %></li>
-        <% }) %>
-        </ul>
+        <div class="other-pantry-container">
+            <ul>
+            <% pantry.forEach((item) => { %>
+                <li><%= item.name %></li>
+            <% }) %>
+            </ul>
+        </div>
     <% } %>
     
 </body>
